@@ -1,0 +1,22 @@
+name: Deploy to Firebase Hosting (token)
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # স্ট্যাটিক স্টার্টার সাইট—build দরকার নেই।
+      # React/Vite হলে এখানে build স্টেপ যোগ করবেন।
+
+      - name: Deploy
+        uses: w9jds/firebase-action@v13
+        with:
+          args: deploy --project studio-9169148148-e27da --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

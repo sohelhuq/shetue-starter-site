@@ -1,0 +1,44 @@
+
+:root{
+  --gold:#c8a94c;
+  --charcoal:#0f172a;
+  --teal:#0ea5a4;
+  --bg:#0b1220;
+  --muted:#94a3b8;
+  --card:#111827;
+  --ring:#1f2937;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:linear-gradient(180deg,var(--bg),#060a15);
+  color:#e5e7eb;
+}
+.container{width:min(1100px,92%);margin-inline:auto}
+header{padding:28px 0;border-bottom:1px solid var(--ring)}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{
+  width:42px;height:42px;border-radius:12px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--gold),var(--teal));
+  color:#0a0f1c;font-weight:800;font-size:22px;box-shadow:0 6px 24px rgba(0,0,0,.25);
+}
+h1{margin:0;font-size:26px;letter-spacing:.2px}
+.tag{margin:2px 0 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;padding:24px 0 40px}
+.card{
+  background:linear-gradient(180deg,var(--card),#0e1626);
+  border:1px solid var(--ring);border-radius:18px;padding:18px 18px 20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+.card h2{margin-top:0}
+.links{list-style:none;padding:0;margin:0}
+.links li{margin:10px 0}
+.links a{
+  color:#e5e7eb;text-decoration:none;border-bottom:1px dashed var(--teal);padding-bottom:2px
+}
+.links a:hover{color:var(--teal)}
+code{background:#0b1220;border:1px solid var(--ring);padding:2px 6px;border-radius:6px}
+.foot{padding:18px 0;border-top:1px solid var(--ring);text-align:center;color:var(--muted)}
